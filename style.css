@@ -1,0 +1,15 @@
+body {
+    font-family: 'Arial';
+}
+
+.search {
+    display: box;
+    align-content: center;
+    justify-items: center;
+}
+
+.nav {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+}
