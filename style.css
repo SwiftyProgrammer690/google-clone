@@ -1,15 +1,29 @@
+/* CS50 ai helped with line 20 */
+
 body {
-    font-family: 'Arial';
+    font-family: "Arial";
 }
 
 .search {
-    display: box;
-    align-content: center;
-    justify-items: center;
+    margin-top: 30px;
+    max-width: fit-content;
+    margin-inline: auto;
 }
 
 .nav {
-    display: inline-block;
     margin: 0;
     padding: 5px;
+    text-align: right;
+}
+
+.nav a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    text-decoration: underline;
 }
