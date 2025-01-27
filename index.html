@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
+        <title>Google</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=16" type="image/x-icon">
     </head>
     <body>
         <div class="nav">
             <a href="#">Image Search</a>
             <a href="#">Advanced Search</a>
         </div>
-        <div class="search">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272">
-            <form action="https://google.com/search" style="margin-top: 20px;">
-                <input type="text" name="q">
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I'm Feeling Lucky">
-            </form>
+        <div class="google">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" style="height: 100%;">
         </div>
+        <form id="search" action="https://www.google.com/search" style="margin-top: 20px;">
+            <!-- cs50.ai helped with the following code for the <form> tag -->
+            <input type="text" name="q">
+            <input type="hidden" id="btnI" name="btnI" value="">
+            <br>
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <input id="lucky" type="submit" value="I'm Feeling Lucky">
+            </div>
+        </form>
+        <script>
+            // The idea to implement a javascript component was given by cs50.ai
+            var form = document.getElementById("search");
+            var lucky = document.getElementById("lucky");
+
+            lucky.addEventListener("click", function (event) {
+                form.action = "btnI=1";
+            });
+        </script>
     </body>
 </html>
