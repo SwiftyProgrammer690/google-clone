@@ -30,3 +30,22 @@ body {
 .buttons {
     margin-top: 40px;
 }
+
+.searchbox {
+    font-family: 'Arial';
+    font-size: 16px;
+    margin-left: 14px;
+    border-color: transparent;
+    background-color: rgb(242, 242, 242);
+}
+
+.searchbar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+    background-color: rgb(242, 242, 242);
+    border: 2px black;
+    width: 638px;
+}

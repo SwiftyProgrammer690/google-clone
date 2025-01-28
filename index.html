@@ -3,7 +3,7 @@
     <head>
         <title>Google</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=16" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     </head>
     <body>
         <div class="nav">
@@ -15,12 +15,16 @@
         </div>
         <form id="search" action="https://www.google.com/search" style="margin-top: 20px;">
             <!-- cs50.ai helped with the following code for the <form> tag -->
-            <input type="text" name="q">
-            <input type="hidden" id="btnI" name="btnI" value="1">
+            <input id="hidden" type="hidden" id="btnI" name="btnI" value="1">
+            <div class="searchbar">
+                <span class="magnifying-glass material-symbols-outlined">search</span>
+                <input class="searchbox" type="text" name="q">
+            </div>
             <br>
             <div class="buttons">
                 <input type="submit" value="Google Search">
                 <input id="lucky" type="submit" value="I'm Feeling Lucky">
+                <a href="https://google.com/search?btnI=1">LUCKY!</a>
             </div>
         </form>
         <script>
@@ -28,9 +32,16 @@
             // the I'm Feeling Lucky Feature was given by cs50.ai
             var form = document.getElementById("search");
             var lucky = document.getElementById("lucky");
+            var hidden = document.getElementById("hidden");
+
+            hidden.name = "q";
 
             lucky.addEventListener("click", function (event) {
-                form.action = "https://www.google.com/search";
+                if(event.target.id == "lucky") {
+                    event.preventDefault();
+                    hidden.name == "btnI";
+                    form.action = "https://www.google.com/search";
+                }
             });
         </script>
     </body>
