@@ -33,11 +33,12 @@ body {
 
 .searchbox {
     font-family: 'Arial';
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 14px;
     border-color: transparent;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(249, 248, 248);
     width: 568px;
+    outline: none;
 }
 
 .searchbar {
@@ -46,7 +47,13 @@ body {
     align-items: center;
     padding: 14px;
     border-radius: 24px;
-    background-color: rgb(242, 242, 242);
-    border: 2px black;
+    background-color: rgb(249, 248, 248);
     width: 638px;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.buttons {
+    max-width: fit-content;
+    margin-inline: auto;
 }
