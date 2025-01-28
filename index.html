@@ -14,35 +14,15 @@
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" style="height: 100%;">
         </div>
         <form id="search" action="https://www.google.com/search" style="margin-top: 20px;">
-            <!-- cs50.ai helped with the following code for the <form> tag -->
-            <input id="hidden" type="hidden" id="btnI" name="btnI" value="1">
             <div class="searchbar">
                 <span class="magnifying-glass material-symbols-outlined">search</span>
-                <input class="searchbox" type="text" name="q">
+                <input autofocus class="searchbox" type="text" name="q">
             </div>
             <br>
             <div class="buttons">
                 <input type="submit" value="Google Search">
-                <input id="lucky" type="submit" value="I'm Feeling Lucky">
-                <a href="https://google.com/search?btnI=1">LUCKY!</a>
+                <input id="lucky" type="submit" value="I'm Feeling Lucky" name="btnI">
             </div>
         </form>
-        <script>
-            // The idea to implement a javascript event listener for
-            // the I'm Feeling Lucky Feature was given by cs50.ai
-            var form = document.getElementById("search");
-            var lucky = document.getElementById("lucky");
-            var hidden = document.getElementById("hidden");
-
-            hidden.name = "q";
-
-            lucky.addEventListener("click", function (event) {
-                if(event.target.id == "lucky") {
-                    event.preventDefault();
-                    hidden.name == "btnI";
-                    form.action = "https://www.google.com/search";
-                }
-            });
-        </script>
     </body>
 </html>
