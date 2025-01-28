@@ -36,7 +36,7 @@ body {
     font-size: 18px;
     margin-left: 14px;
     border-color: transparent;
-    background-color: rgb(249, 248, 248);
+    background-color: rgb(246,	248, 249);
     width: 568px;
     outline: none;
 }
@@ -47,13 +47,25 @@ body {
     align-items: center;
     padding: 14px;
     border-radius: 24px;
-    background-color: rgb(249, 248, 248);
+    background-color: rgb(246,	248, 249);
     width: 638px;
     max-width: fit-content;
     margin-inline: auto;
+    margin-bottom: -25px;
 }
 
 .buttons {
     max-width: fit-content;
     margin-inline: auto;
+}
+
+.buttons .button {
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+    padding: 13px;
+    font-size: 15px;
+    background-color: rgb(246,	248, 249);
+    color: rgb(46, 49, 52);
+    margin-left: 10px;
 }
