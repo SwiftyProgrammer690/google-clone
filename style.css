@@ -13,7 +13,7 @@ body {
     display: inline-block; /* CS50 ai helped with this line */
     margin-right: 10px;
     font-size: 14px;
-    text-decoration: none;
+    text-decoration: none; 
     color: black;
 }
 
